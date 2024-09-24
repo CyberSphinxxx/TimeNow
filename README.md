@@ -31,3 +31,10 @@ TimeNow is a simple web application that allows users to input a city or country
    Used to get the time and timezone information based on geographic coordinates.
    
    - API Documentation: [https://timezonedb.com/api](https://timezonedb.com/api)
+
+## Project Setup
+
+### Prerequisites
+
+- A basic understanding of HTML, CSS, and JavaScript.
+- An active API key for both **OpenWeatherMap** and **TimeZoneDB**.
