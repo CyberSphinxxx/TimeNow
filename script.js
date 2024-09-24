@@ -23,7 +23,9 @@ document.getElementById('getTimeBtn').addEventListener('click', function() {
 
                 // Use the coordinates to get the timezone using TimeZoneDB API
                 getTimezoneAndTime(lat, lon, location);
-            } else {
+            }
+            
+            else {
                 document.getElementById('result').innerHTML = 'Location not found. Please enter a valid city or country.';
             }
         })
@@ -52,7 +54,9 @@ function getTimezoneAndTime(lat, lon, location) {
                     currentTime.setSeconds(currentTime.getSeconds() + 1);
                     displayTime(location, currentTime);
                 }, 1000);
-            } else {
+            }
+            
+            else {
                 document.getElementById('result').innerHTML = 'Error fetching time data!';
             }
         })
@@ -77,7 +81,9 @@ function changeBackground() {
     if (hour >= 6 && hour < 18) {
         // Daytime: 6 AM to 6 PM
         body.style.backgroundImage = "url('daytime.jpg')"; // Replace with your daytime image
-    } else {
+    }
+    
+    else {
         // Nighttime: 6 PM to 6 AM
         body.style.backgroundImage = "url('nighttime.jpg')"; // Replace with your nighttime image
     }
