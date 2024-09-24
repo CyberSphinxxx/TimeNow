@@ -1,12 +1,23 @@
+html, body {
+    height: 100%; /* Make sure the body and HTML take full height of the viewport */
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #008498;
     text-align: center;
     padding: 50px;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensure background covers full viewport */
 }
 
 .container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -37,6 +48,9 @@ button:hover {
 }
 
 #result {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
     margin-top: 20px;
     font-size: 18px;
     color: #333;
