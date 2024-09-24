@@ -23,7 +23,9 @@
  
                  // Use the coordinates to get the timezone using TimeZoneDB API
                  getTimezoneAndTime(lat, lon, location);
-             } else {
+             }
+             
+             else {
                  document.getElementById('result').innerHTML = 'Location not found. Please enter a valid city or country.';
              }
          })
@@ -52,7 +54,9 @@
                      currentTime.setSeconds(currentTime.getSeconds() + 1);
                      displayTime(location, currentTime);
                  }, 1000);
-             } else {
+             }
+             
+             else {
                  document.getElementById('result').innerHTML = 'Error fetching time data!';
              }
          })
@@ -61,9 +65,30 @@
          });
  }
  
- // Function to display the time
+ // display the time
  function displayTime(location, time) {
      const formattedTime = time.toLocaleTimeString();  // Get time in HH:MM:SS format
      document.getElementById('result').innerHTML = `Current time in ${location}: ${formattedTime}`;
  }
  
+ // Function to change background based on time
+function changeBackground() {
+    const now = new Date();
+    const hour = now.getHours();
+
+    const body = document.body;
+
+    if (hour >= 6 && hour < 18) {
+        // Daytime: 6 AM to 6 PM
+        body.style.backgroundImage = "url('daytime.jpg')"; // Replace with your daytime image
+    } else {
+        // Nighttime: 6 PM to 6 AM
+        body.style.backgroundImage = "url('nighttime.jpg')"; // Replace with your nighttime image
+    }
+}
+
+// Call the function when the page loads
+changeBackground();
+
+// Optionally, you could check and update the background every hour
+setInterval(changeBackground, 3600000); // Update every hour (3600000ms = 1 hour)

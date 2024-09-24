@@ -1,46 +1,70 @@
 html, body {
-    height: 100%; /* Make sure the body and HTML take full height of the viewport */
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #008498;
-    text-align: center;
-    padding: 50px;
-    background-image: url('background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Ensure background covers full viewport */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-image 0.5s ease-in-out;
+    color: white;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15); /* Slight transparency */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Smooth glass-like effect */
 }
 
 h1 {
-    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+input, button, #result {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 input {
-    padding: 10px;
-    width: 80%;
-    margin-bottom: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -48,10 +72,10 @@ button:hover {
 }
 
 #result {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 15px;
     font-size: 18px;
     color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
