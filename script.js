@@ -1,5 +1,4 @@
 // This is just a free API key that I created; you must create your own API key from the TimeZoneDB site and replace it here.
-
 let intervalId;
 
 document.getElementById('getTimeBtn').addEventListener('click', function() {
@@ -65,26 +64,24 @@ function getTimezoneAndTime(lat, lon, location) {
 function displayTime(location, time) {
     const formattedTime = time.toLocaleTimeString();  // Get time in HH:MM:SS format
     document.getElementById('result').innerHTML = `Current time in ${location}: ${formattedTime}`;
+    
+    // Change the background based on the time at the user's inputted location
+    changeBackground(time);
 }
 
 // Function to change background based on time
-function changeBackground() {
-    const now = new Date();
-    const hour = now.getHours();
+function changeBackground(time) {
+    const hour = time.getHours();  // Use the time from the user's input location
 
     const body = document.body;
 
     if (hour >= 6 && hour < 18) {
         // Daytime: 6 AM to 6 PM
         body.style.backgroundImage = "url('daytime.jpg')"; // Replace with your daytime image
-    } else {
+    }
+    
+    else {
         // Nighttime: 6 PM to 6 AM
         body.style.backgroundImage = "url('nighttime.jpg')"; // Replace with your nighttime image
     }
 }
-
-// Call the function when the page loads
-changeBackground();
-
-// Optionally, you could check and update the background every hour
-setInterval(changeBackground, 3600000); // Update every hour (3600000ms = 1 hour)
