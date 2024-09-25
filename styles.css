@@ -7,16 +7,29 @@ html, body {
 }
 
 body {
-    background-color: #008498;
+    background: linear-gradient(45deg, #000000, #000000, #a20187, #1e00ff); /* Initial animated gradient */
+    background-size: 300% 300%;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-image 0.5s ease-in-out;
+    animation: gradientAnimation 10s ease infinite; /* Gradient animation */
     color: white;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
