@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(45deg, #000000, #000000, #a20187, #1e00ff); /* Initial animated gradient */
+    background: linear-gradient(45deg, #5bbff9, #000c66, #a20187, #1e00ff); /* Initial animated gradient */
     background-size: 300% 300%;
     background-repeat: no-repeat;
     background-position: center;
