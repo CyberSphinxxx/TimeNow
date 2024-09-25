@@ -22,7 +22,9 @@ document.getElementById('getTimeBtn').addEventListener('click', function() {
 
                 // Use the coordinates to get the timezone using TimeZoneDB API
                 getTimezoneAndTime(lat, lon, location);
-            } else {
+            }
+            
+            else {
                 document.getElementById('result').innerHTML = 'Location not found. Please enter a valid city or country.';
             }
         })
@@ -51,7 +53,9 @@ function getTimezoneAndTime(lat, lon, location) {
                     currentTime.setSeconds(currentTime.getSeconds() + 1);
                     displayTime(location, currentTime);
                 }, 1000);
-            } else {
+            }
+            
+            else {
                 document.getElementById('result').innerHTML = 'Error fetching time data!';
             }
         })
